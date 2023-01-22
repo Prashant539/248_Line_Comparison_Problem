@@ -23,7 +23,7 @@ namespace LineComparisonProblem
             int y2 = Convert.ToInt32(Console.ReadLine());
 
             var Length1 =Math.Sqrt((Math.Pow(x1-x2, 2) +Math.Pow(y2 - y1, 2)));
-            Console.WriteLine("Length of line : " + Length1);
+            Console.WriteLine("Length of line 1 : " + Length1);
 
             Console.WriteLine("Enter the third Co-ordinate x3: ");
             int x3 = Convert.ToInt32(Console.ReadLine());
@@ -38,12 +38,20 @@ namespace LineComparisonProblem
             int y4 = Convert.ToInt32(Console.ReadLine());
 
             var Length2 = Math.Sqrt((Math.Pow(x3 - x4, 2) + Math.Pow(y3 - y4, 2)));
-            Console.WriteLine("Length of line : " + Length2);
+            Console.WriteLine("Length of line 2 : " + Length2);
 
             if(Length1 == Length2)
             {
                 Console.WriteLine("The Two Lines are Equal");
 
+            }
+            else if(Length1 < Length2)
+            {
+                Console.WriteLine("Length of line 1 is less than Length of line 2");
+            }
+            else if(Length2 < Length1)
+            {
+                Console.WriteLine("Length of line 2 is less than Length of line 1");
             }
             else
             {
